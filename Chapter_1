@@ -1,1 +1,26 @@
+public class Main
+{
+   /* This program displays a greeting */
+   public static void main(String[] args)   
+   {
+      System.out.println("Hello World!");         
+   }
+}
 
+
+/*
+List down the spotted bugs below:
+
+e.g.
+- // wrong syntax for access modifier "publlic" instead of "public"
+
+Bugs:
+1. Change fixdebug class name to main as a declaration of class name
+2. There should be open and closing square parentheses in the string.
+3. "e" is missing from Systm.out.println.
+4. Missing semi colon
+5. Missing close bracket at the end
+6. "e" is missing from Systm.out.println.
+
+
+*/
