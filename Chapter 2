@@ -1,0 +1,16 @@
+import javax.swing.JOptionPane;
+
+public class nameConfirmation{
+
+    public static void main(String[] args) {
+        String name = JOptionPane.showInputDialog("What is your name? ");
+        
+        int choice = JOptionPane.showConfirmDialog(null, "Please confirm", "Confirmation", JOptionPane.YES_NO_OPTION);
+        if (choice == JOptionPane.NO_OPTION) {
+            JOptionPane.showMessageDialog(null, "Closing the program");
+            System.exit(0);
+        } 
+        String output = "Hello " + name + "!";
+        JOptionPane.showMessageDialog(null, output);
+    }
+}
