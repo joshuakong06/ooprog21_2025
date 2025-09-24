@@ -1,0 +1,26 @@
+public class DebugCircle {
+public static void main(String[] args) {
+    private int radius;
+    private final double PI = 3.14159;
+
+    public DebugCircle(int radius) {
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public int getDiameter() {
+        return 2 * radius;
+    }
+
+    public double getArea() {
+        return PI * radius * radius;
+    }
+    }
+}
+
+
+
+
