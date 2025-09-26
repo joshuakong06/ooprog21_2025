@@ -21,6 +21,11 @@ public static void main(String[] args) {
     }
 }
 
+
+
+
+
+
 DebugBox.java
 
 public class DebugBox
@@ -53,6 +58,41 @@ public class DebugBox
    {
       double vol = length * width * height;
       return vol;
+   }
+}
+
+
+
+
+DebugPen.java
+
+
+
+public class DebugPen
+{
+   private String color;
+   private String point;
+
+   public DebugPen()
+   {
+      color = "black";
+      point = "fine";
+   }
+
+   public DebugPen(String color, String point)
+   {
+      this.color = color;
+      this.point = point;
+   }
+
+   public String getColor()
+   {
+      return color;
+   }
+
+   public String getPoint()
+   {
+      return point;
    }
 }
 
