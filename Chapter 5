@@ -1,0 +1,115 @@
+DebugFive1.java
+
+import java.util.*;
+public class DebugFive1
+{
+   public static void main(String args[])
+   {
+      Scanner kb = new Scanner(System.in);
+      final double HIGH_PRICE = 2.59;
+      final double MED_PRICE = 1.99;
+      final double LOW_PRICE = 0.89;
+      int usersChoice;
+      double bill = 0.0;  // Initialize bill to 0.0
+      System.out.println("Order please 1 - Burger 2 - Hotdog");
+      System.out.print("3 - Grilled cheese 4 - Fish sandwich >> ");
+      usersChoice = kb.nextInt();
+      if(usersChoice == 1 || usersChoice == 2)  // Use || (OR) instead of && (AND)
+         bill = bill + HIGH_PRICE;
+      else
+         bill = bill + MED_PRICE;
+      System.out.print("Fries with that? 1 - Yes 2 - No >> ");
+      usersChoice = kb.nextInt();
+      if(usersChoice == 1)  // Use == for comparison, not = (assignment)
+         bill = bill + LOW_PRICE;
+      System.out.println("Total bill is " + bill);  // Fix string concatenation and add missing quote
+   }
+}
+
+
+DebugFive2.java
+
+import java.util.Scanner;
+public class DebugFive2
+{
+   public static void main(String args[])
+   {
+      int num;
+      int num2;
+      Scanner input = new Scanner(System.in);
+      System.out.print("Enter a number ");
+      num = input.nextInt();  // Add missing parentheses
+      System.out.print("Enter another number ");
+      num2 = input.nextInt();  // Add missing parentheses
+      if((num % num2 == 0) || (num2 % num == 0))  // Use || (OR) and check both directions for divisibility
+      {
+         System.out.println("One of these numbers is");
+         System.out.println("evenly divisible into the other");  // Remove leading space for cleaner output
+      }
+      else
+      {
+         System.out.println("Neither of these numbers is");
+         System.out.println("evenly divisible into the other");  // Remove leading space for cleaner output
+      }
+   }
+}
+
+
+DebugFive3.java
+
+import java.util.Scanner;
+public class DebugFive3
+{
+   public static void main (String args[])
+   {
+      int item;
+      String output;
+      final int LOW = 111;
+      final int HIGH = 999;
+      final int CUTOFF = 500;
+      Scanner input = new Scanner(System.in);
+      System.out.print("Please enter item number >> ");
+      item = input.nextInt();
+      if(item < LOW)
+         output = "Invalid - Item number too low";  // Fix logic: check < LOW for too low (add "Invalid" to match description)
+      else if(item > HIGH)
+         output = "Invalid - Item number too high";  // Fix logic: check > HIGH for too high (fix typo HIGHH -> HIGH, add "Invalid")
+      else if(item < CUTOFF)
+         output = "Valid - Item in Automotive Department";  // Fix logic: use < CUTOFF for Automotive (not ==)
+      else
+         output = "Valid - Item in Housewares Department";  // Covers 500 or higher
+      System.out.println(output);
+   }
+}
+
+
+DebugFive4.java
+
+
+import java.util.*;
+public class DebugFive4
+{
+   public static void main (String args[])
+   {
+      int one, two, three, four;
+      int highest;
+      Scanner input = new Scanner(System.in);
+      System.out.print("Enter an integer >> ");
+      one = input.nextInt();  // Assign to 'one'
+      System.out.print("Enter an integer >> ");
+      two = input.nextInt();  // Assign to 'two' (was overwriting 'one')
+      System.out.print("Enter an integer >> ");
+      three = input.nextInt();  // Assign to 'three' (was overwriting 'one')
+      System.out.print("Enter an integer >> ");
+      four = input.nextInt();  // Assign to 'four' (was overwriting 'one')
+      if(one > two && one > three && one > four)
+         highest = one;
+      else if(two > one && two > three && two > four)  // Fix logic: use && for all comparisons (was || before last)
+         highest = two;
+      else if(three > one && three > two && three > four)  // Fix logic: check three > one (was == one)
+         highest = three;
+      else
+         highest = four;
+      System.out.println("The highest number is " + highest);
+   }
+}
