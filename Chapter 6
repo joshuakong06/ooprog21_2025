@@ -1,0 +1,59 @@
+DebugSix1.java
+
+
+
+import java.util.Scanner;
+public class DebugSix1
+{
+    public static void main(String args[])
+    {
+        Scanner keyboard = new Scanner(System.in);
+        int days;
+        double money = 0.01;
+        int day = 1;
+        System.out.print("Enter number of days >> ");
+        days = keyboard.nextInt();
+        while(day <= days)
+        {
+            System.out.println("After day " + day + " you have " + money);
+            money = 2 * money;
+            ++day;
+        }
+    }
+}
+
+
+CodingBankBalance2.java
+
+
+import java.util.Scanner;
+
+public class BankBalanceCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        double balance;            
+        final double RATE = 0.03;  
+        int year = 1;              
+        int choice;                
+
+        System.out.print("Enter initial balance: $");
+        balance = input.nextDouble();
+
+        do {
+            
+            balance = balance + (balance * RATE);
+
+            System.out.printf("After year %d at %.2f interest rate, balance is $%.4f%n",
+                              year, RATE, balance);
+            
+            System.out.println("\nDo you want to see the balance at the end of another year?");
+            System.out.print("Enter 1 for yes or any other number for no >> ");
+            choice = input.nextInt();
+
+            year++;
+        } while (choice == 1);
+
+        System.out.println("\n----jGRASP: Operation complete.");
+    }
+}
